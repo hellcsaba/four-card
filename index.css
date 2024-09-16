@@ -64,8 +64,9 @@ body {
     row-gap: 0.5rem;
     max-width: 20rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
-
 
 .features__card:hover {
     transform: translateY(-5px); /* Lifts the card slightly */
@@ -73,6 +74,30 @@ body {
                 0 3px 6px rgba(0, 0, 0, 0.1); /* Slight increase in shadow intensity */
 }
 
+.features__banner {
+    position: absolute;
+    height: 0.25rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+
+.features__banner--supervisor {
+    background: var(--cyan);
+}
+
+.features__banner--team {
+    background: var(--red);
+}
+
+.features__banner--karma {
+    background: var(--orange);
+}
+
+.features__banner--calculator {
+    background: var(--blue);
+}
 
 .features__icon {
     max-width: 20%;
@@ -83,22 +108,6 @@ body {
 .features__description {
     font-weight: 400;
     color: var(--grayish-blue);
-}
-
-.features__card--supervisor {
-    border-top: 0.25rem solid var(--cyan);
-}
-
-.features__card--team {
-    border-top: 0.25rem solid var(--red);
-}
-
-.features__card--karma {
-    border-top: 0.25rem solid var(--orange);
-}
-
-.features__card--calculator {
-    border-top: 0.25rem solid var(--blue);
 }
 
 @media (min-width: 75rem) {
